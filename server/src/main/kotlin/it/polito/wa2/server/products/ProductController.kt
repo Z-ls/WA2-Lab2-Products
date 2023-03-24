@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class ProductController(private val productService: ProductService) {
 
-    @GetMapping("/products")
+    @GetMapping("/API/products")
     fun getAllProducts(): List<ProductDTO> {
         return productService.getAllProducts()
     }
 
-    @GetMapping("/product/{id}")
+    @GetMapping("/API/product/{id}")
     fun getProduct(@PathVariable id: Long): ProductDTO? {
         return productService.getProduct(id)
     }
