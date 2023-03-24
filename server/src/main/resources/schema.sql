@@ -1,12 +1,14 @@
-CREATE TABLE IF NOT EXISTS products
+DROP TABLE IF EXISTS products;
+CREATE TABLE products
 (
     id          SERIAL PRIMARY KEY,
-    name        VARCHAR(255)   NOT NULL,
-    price       DECIMAL(10, 2) NOT NULL,
-    description VARCHAR(255)   NOT NULL
+    name        VARCHAR(255) NOT NULL,
+    price       FLOAT(53)    NOT NULL,
+    description VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS profiles
+DROP TABLE IF EXISTS profiles;
+CREATE TABLE profiles
 (
     id         SERIAL PRIMARY KEY,
     first_name VARCHAR(20) NOT NULL,
