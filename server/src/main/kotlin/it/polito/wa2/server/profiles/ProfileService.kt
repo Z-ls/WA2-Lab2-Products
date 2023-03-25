@@ -6,6 +6,6 @@ interface ProfileService {
 //    PUT /API/profiles/{email}
 
     fun getProfile(email: String): ProfileDTO?
-    fun createProfile(profile: Profile): Long?
-    fun updateProfile(email: String, profile: Profile): Long?
+    fun createProfile(profile: Profile): String?
+    fun updateProfile(email: String, profile: Profile): String?
 }

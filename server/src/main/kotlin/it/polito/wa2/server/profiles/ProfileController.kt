@@ -11,7 +11,7 @@ class ProfileController(private val profileService: ProfileService) {
     }
 
     @PostMapping("/API/profiles")
-    fun createProfile(@RequestBody profile: Profile): Long? {
+    fun createProfile(@RequestBody profile: Profile): String? {
         return profileService.createProfile(profile)
     }
 
@@ -19,7 +19,7 @@ class ProfileController(private val profileService: ProfileService) {
     fun updateProfile(
         @PathVariable email: String,
         @RequestBody profile: Profile
-    ): Long? {
+    ): String? {
         return profileService.updateProfile(email, profile)
     }
 }

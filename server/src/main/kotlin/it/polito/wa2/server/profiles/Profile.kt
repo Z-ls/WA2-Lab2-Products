@@ -8,11 +8,10 @@ import jakarta.persistence.Table
 @Table(name = "profiles")
 class Profile {
     @Id
-    var id: Long = 0
+    var email: String = ""
 
     var firstName: String = ""
     var lastName: String = ""
-    var email: String = ""
     var password: String = ""
     var salt: String = ""
 }

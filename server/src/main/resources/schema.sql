@@ -10,10 +10,9 @@ CREATE TABLE products
 DROP TABLE IF EXISTS profiles;
 CREATE TABLE profiles
 (
-    id         SERIAL PRIMARY KEY,
+    email      VARCHAR(20) NOT NULL PRIMARY KEY,
     first_name VARCHAR(20) NOT NULL,
     last_name  VARCHAR(20) NOT NULL,
-    email      VARCHAR(20) NOT NULL,
     password   VARCHAR(20) NOT NULL,
     salt       VARCHAR(20) NOT NULL
 );
@@ -29,8 +28,7 @@ VALUES ('Product 4', 40.00, 'Description 4');
 INSERT INTO products (name, price, description)
 VALUES ('Product 5', 50.00, 'Description 5');
 
-INSERT INTO profiles (first_name, last_name, email, password, salt)
-VALUES ('John', 'Doe', 'Johndoe@gmail.com
-', 'password', 'salt');
-INSERT INTO profiles (first_name, last_name, email, password, salt)
-VALUES ('Jane', 'Doe', 'Janedoe@gmail.com', 'password', 'salt');
+INSERT INTO profiles (email, first_name, last_name, password, salt)
+VALUES ('Johndoe@gmail.com', 'John', 'Doe', 'password', 'salt');
+INSERT INTO profiles (email, first_name, last_name, password, salt)
+VALUES ('Janedoe@gmail.com', 'Jane', 'Doe', 'password', 'salt');
